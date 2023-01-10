@@ -1,0 +1,18 @@
+
+name: First Workflow
+
+# Define when it should be executed (on what event/trigger)
+# workflow_dispatch - allows us to manually start the workflow
+on: workflow_dispatch
+
+# What work to do
+jobs: 
+  # can name whatever you want
+  first-job: 
+    # environment/runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Greeting
+        run: echo "Hello World"
+      - name: Print Goodbye
+        run: echo "See ya later alligator"
